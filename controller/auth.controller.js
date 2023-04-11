@@ -61,8 +61,6 @@ const loginUser = async (req, res) => {
         expiresIn: "7 days",
       }
     );
-
-
     res.status(200).send({ code: 200, status: true, token, message: "Login Successfully" });
   } else {
     return res.send({ code: 404, status: false, message: "something went wrong" });
